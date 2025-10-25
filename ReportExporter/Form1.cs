@@ -22,19 +22,22 @@ namespace ReportExporter
 			InitializeComponent();
 		}
 
-		private void simpleButton1_Click(object sender, EventArgs e)
+		private void btnWordExport_Click(object sender, EventArgs e)
 		{
-			string reportPath = Path.Combine(ReportPath, "report.docx");
+			try
+			{
+				string reportPath = Path.Combine(ReportPath, "report.docx");
+				PngToWordExporter.Export(reportPath, ImagePath, "Сводный отчет по субъекту РФ Ханты-Мансийский АО");
 
-			PngToWordExporter.Export(reportPath, ImagePath, "Сводный отчет по субъекту РФ Ханты-Мансийский АО");
+				MessageBox.Show("Отчет сохранен успешно");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Ошибка");
+			}
 		}
 
-		private void simpleButton2_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void simpleButton3_Click(object sender, EventArgs e)
+		private void btnOpenImage_Click(object sender, EventArgs e)
 		{
 			using (OpenFileDialog openFileDialog = new OpenFileDialog())
 			{
@@ -47,16 +50,12 @@ namespace ReportExporter
 				{
 					//Get the path of specified file
 					ImagePath = openFileDialog.FileName;
+					textBox1.Text = ImagePath;
 				}
 			}
 		}
 
-		private void Form1_Load(object sender, EventArgs e)
-		{
-
-		}
-
-		private void simpleButton4_Click(object sender, EventArgs e)
+		private void btnOpenReportFolder_Click(object sender, EventArgs e)
 		{
 			using (var folderDialog = new FolderBrowserDialog())
 			{
@@ -71,7 +70,7 @@ namespace ReportExporter
 					string selectedPath = folderDialog.SelectedPath;
 					// Используйте selectedPath (например, выведите в TextBox)
 					ReportPath = selectedPath;
-					textEdit1.Text = selectedPath;
+					textBox2.Text = selectedPath;
 				}
 			}
 		}
