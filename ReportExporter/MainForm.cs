@@ -13,16 +13,16 @@ namespace ReportExporter
 {
 
 
-	public partial class Form1 : Form
+	public partial class MainForm : Form
 	{
 		public string ImagePath { get; set; } = null;
 		public string ReportPath { get; set; } = null;
-		public Form1()
+		public MainForm()
 		{
 			InitializeComponent();
 		}
 
-		private void btnWordExport_Click(object sender, EventArgs e)
+		private void BtnWordExport_Click(object sender, EventArgs e)
 		{
 			try
 			{
@@ -31,13 +31,28 @@ namespace ReportExporter
 
 				MessageBox.Show("Отчет сохранен успешно");
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
 				MessageBox.Show("Ошибка");
 			}
 		}
 
-		private void btnOpenImage_Click(object sender, EventArgs e)
+		private void BtnPdfExport_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string reportPath = Path.Combine(ReportPath, "report.pdf");
+				PdfExporter.Export(reportPath, ImagePath, "Сводный отчет по субъекту РФ Ханты-Мансийский АО");
+
+				MessageBox.Show("Отчет сохранен успешно");
+			}
+			catch (Exception)
+			{
+				MessageBox.Show("Ошибка");
+			}
+		}
+
+		private void BtnOpenImage_Click(object sender, EventArgs e)
 		{
 			using (OpenFileDialog openFileDialog = new OpenFileDialog())
 			{
@@ -55,7 +70,7 @@ namespace ReportExporter
 			}
 		}
 
-		private void btnOpenReportFolder_Click(object sender, EventArgs e)
+		private void BtnOpenReportFolder_Click(object sender, EventArgs e)
 		{
 			using (var folderDialog = new FolderBrowserDialog())
 			{

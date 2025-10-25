@@ -1,6 +1,6 @@
 ﻿namespace ReportExporter
 {
-	partial class Form1
+	partial class MainForm
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -44,7 +44,7 @@
 			this.button1.TabIndex = 0;
 			this.button1.Text = "Выбрать изображение";
 			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.btnOpenImage_Click);
+			this.button1.Click += new System.EventHandler(this.BtnOpenImage_Click);
 			// 
 			// button2
 			// 
@@ -54,7 +54,7 @@
 			this.button2.TabIndex = 1;
 			this.button2.Text = "Выбрать директорию отчета";
 			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.btnOpenReportFolder_Click);
+			this.button2.Click += new System.EventHandler(this.BtnOpenReportFolder_Click);
 			// 
 			// button3
 			// 
@@ -64,7 +64,7 @@
 			this.button3.TabIndex = 2;
 			this.button3.Text = "Экспорт в Word";
 			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.btnWordExport_Click);
+			this.button3.Click += new System.EventHandler(this.BtnWordExport_Click);
 			// 
 			// button4
 			// 
@@ -74,6 +74,7 @@
 			this.button4.TabIndex = 3;
 			this.button4.Text = "Экспорт в Pdf";
 			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.BtnPdfExport_Click);
 			// 
 			// textBox1
 			// 

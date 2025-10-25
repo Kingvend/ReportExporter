@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.33423.255
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportExporter", "ReportExporter\ReportExporter.csproj", "{9F13D9CF-8BA5-4AC0-9587-193D1E83264E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressHelper", "DevExpressExportHelper\DevExpressHelper.csproj", "{0D74BD3A-620B-41FA-B84E-80E597D78FE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9F13D9CF-8BA5-4AC0-9587-193D1E83264E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F13D9CF-8BA5-4AC0-9587-193D1E83264E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F13D9CF-8BA5-4AC0-9587-193D1E83264E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D74BD3A-620B-41FA-B84E-80E597D78FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D74BD3A-620B-41FA-B84E-80E597D78FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D74BD3A-620B-41FA-B84E-80E597D78FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D74BD3A-620B-41FA-B84E-80E597D78FE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
